@@ -8,7 +8,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Usuarios from './components/Usuarios';
 import Productos from './components/Productos';
-import Categorias from './components/Categorías';
+import Categorias from './components/Categorias';
 
 function App() {
   return (
