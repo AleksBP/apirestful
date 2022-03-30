@@ -18,6 +18,7 @@
 #navbar-items ul li{
     width: 400px;
     padding-left: 15px;
+    color: #0A58CA
 }
 
 #navbar-items ul li:hover{
@@ -34,6 +35,41 @@
     margin-bottom: 15px;vertical-align: bottom;
 }
 
+#engrane{
+    width: 32px;
+}
+
+#btn-engrane{
+    padding: 4px;
+}
+
 #profile{
     text-align: center;
+}
+
+#cerrarSesion{
+    position: absolute;
+    right: 40px;
+    margin-top: 18px;
+    border-radius: 5px;
+    /* border: 1px solid black */
+}
+
+#cerrarSesion:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+#cerrarSesion-item{
+    position: absolute;
+    right: 40px;
+    margin-top: 65px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    border: 1px solid lightgray;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+#cerrarSesion-item a{
+    color: black;
 }

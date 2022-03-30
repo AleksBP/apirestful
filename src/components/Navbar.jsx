@@ -4,6 +4,24 @@ import { NavLink } from 'react-router-dom';
 import '../assets/css/Navbar.css';
 
 class Navbar extends React.Component{
+
+    open_dropdown(){
+        console.log("Cerrando sesion");
+        let drop = document.getElementById("cerrarSesion-item");
+
+        if ((drop.style.display == "") || (drop.style.display == "none")){
+            drop.style.display = "block";
+        }else{
+            drop.style.display = "none";
+        }
+
+    }
+
+    cerrarSesion(){
+        localStorage.clear();
+        window.location.replace("/");
+    }
+
     render(){
         return(
             <React.Fragment>
@@ -23,6 +41,14 @@ class Navbar extends React.Component{
                             
                         </ul>
                     </div>
+                </div>
+                <div id="cerrarSesion">
+                    <a className='btn btn-engrane' onClick={this.open_dropdown}>
+                        <img id="engrane" src={require('../assets/img/engrane.png')} />
+                    </a>
+                </div>
+                <div id="cerrarSesion-item" >
+                    <a href="#" onClick={this.cerrarSesion}>Cerrar sesión</a>
                 </div>
             </React.Fragment>
         );

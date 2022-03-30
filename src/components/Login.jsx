@@ -70,6 +70,11 @@ class Login extends React.Component{
                 <div className="wrapper fadeInDown">
                     <div id="formContent">
 
+                        <div id="loginHeader">
+                            <h1>API RESTful</h1>
+                            <h4>PKT1</h4>
+                        </div>
+
                         <form onSubmit={this.manejadorSubmit}>
                             <input type="text" id="correo" placeholder="Correo" onChange={this.manejadorOnChange}/>
                             <input type="text" id="password" placeholder="Contraseña" onChange={this.manejadorOnChange}/>

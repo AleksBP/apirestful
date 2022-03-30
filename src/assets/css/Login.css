@@ -34,13 +34,14 @@ html {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
-    padding: 30px;
+    padding: 50px 30px;
     width: 90%;
     max-width: 450px;
     position: relative;
+    border: 1px solid lightgray;
     /* padding: 0px; */
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    /* -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3); */
+    /* box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3); */
     text-align: center;
   }
   
@@ -140,4 +141,12 @@ html {
 
   .fadeInDown{
       padding: 160px;
+  }
+
+  #loginHeader h1{
+    font-size: 32px;
+  }
+  #loginHeader h4{
+    font-size: 24px;
+    padding-bottom: 15px;
   }
