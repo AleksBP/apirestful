@@ -28,14 +28,21 @@ class Login extends React.Component{
         await this.setState({
             form:{
                 ...this.state.form,
-                [e.target.name]: e.target.value
+                [e.target.id]: e.target.value
             }
         })
         console.log(this.state.form);
     }
 
-    manejadorBoton(){
+    manejadorBoton=()=>{
         let url = ApiURL + "/api/auth/login";
+        console.log(url);
+        console.log(this.state.form);
+        axios.post(url, this.state.form)
+        .then(response=>{
+            console.log(response);
+        });
+
     }
 
     render(){
@@ -45,8 +52,8 @@ class Login extends React.Component{
                     <div id="formContent">
 
                         <form onSubmit={this.manejadorSubmit}>
-                            <input type="text" id="correo" name="login" placeholder="Correo" onChange={this.manejadorOnChange}/>
-                            <input type="text" id="password" name="login" placeholder="Contraseña" onChange={this.manejadorOnChange}/>
+                            <input type="text" id="correo" placeholder="Correo" onChange={this.manejadorOnChange}/>
+                            <input type="text" id="password" placeholder="Contraseña" onChange={this.manejadorOnChange}/>
                             <br /><br />
                             <input type="submit" value="INGRESAR" onClick={this.manejadorBoton}/>
                         </form>
