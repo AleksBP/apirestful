@@ -6,7 +6,7 @@ class Categorias extends React.Component{
         return(
             <React.Fragment>
                 <div className='page'>
-                    Elemento desde Categorias.jsx
+                    <b>Categorías</b>
                 </div>
 
             </React.Fragment>

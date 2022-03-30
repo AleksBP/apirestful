@@ -8,19 +8,20 @@ class Navbar extends React.Component{
         return(
             <React.Fragment>
                 <div id="navbar">
-                    <span>IMAGEN PP</span><br />
-                    <span>Título</span><br />
-                    <ul>
-                        <li>
-                            <NavLink to='/usuarios'>Usuarios</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/productos'>Productos</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/categorias'>Categorías</NavLink>
-                        </li>
-                    </ul>
+                    <div id="profile">
+                        <img id="avatar" src={require('../assets/img/avatar.jpg')} />
+                        <br />
+                        <span>Usuario</span>
+                    </div>
+                    <div id="navbar-items">
+                        <ul>
+                            <NavLink to='/dashboard'><li>Dashboard</li></NavLink>
+                            <NavLink to='/usuarios'><li>Usuarios</li></NavLink>
+                            <NavLink to='/productos'><li>Productos</li></NavLink>
+                            <NavLink to='/categorias'><li>Categorías</li></NavLink>
+                            
+                        </ul>
+                    </div>
                 </div>
             </React.Fragment>
         );

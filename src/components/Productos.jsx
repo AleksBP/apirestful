@@ -6,7 +6,7 @@ class Productos extends React.Component{
         return(
             <React.Fragment>
                 <div className='page'>
-                    Elemento desde Productos.jsx
+                    <b>Productos</b>
                 </div>
             </React.Fragment>
         );

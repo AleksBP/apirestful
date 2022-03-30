@@ -6,7 +6,7 @@ class Usuarios extends React.Component{
         return(
             <React.Fragment>
                 <div className="page">
-                    Elemento desde Usuarios.jsx
+                    <b>Usuarios</b>
 
                 </div>
             </React.Fragment>

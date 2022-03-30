@@ -1,6 +1,38 @@
 #navbar{
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid gray;
     width: 400px;
     min-height: 100%;
+}
+
+#navbar-items{
+    margin-top: 15px;
+    line-height: 40px;
+}
+
+#navbar-items ul{
+    list-style: none;
+    padding: 0;
+}
+
+#navbar-items ul li{
+    width: 400px;
+    padding-left: 15px;
+}
+
+#navbar-items ul li:hover{
+    background-color: lightgray;
+}
+
+#avatar{
+    width: 50%;
+    border: 2px solid gray;
+    border-radius: 50%;
+    /* margin-left: 25%; */
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#profile{
+    text-align: center;
 }

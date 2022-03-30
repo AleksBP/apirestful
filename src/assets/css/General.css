@@ -1,5 +1,9 @@
 .page{
     margin-left: 400px;
-    border: 1px solid red;
+    padding-top: 22px;
+    padding-left: 15px;
+    height: 75px;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
     
 }
