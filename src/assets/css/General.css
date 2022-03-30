@@ -13,6 +13,11 @@
     padding: 50px 100px;
 }
 
+.page-profile-card{
+    margin-left: 400px;
+    padding: 10px 30px;
+}
+
 th, td{
     height: 50px;
 }
@@ -23,4 +28,14 @@ td{
 
 td img{
     width: 120px;
+}
+
+.col-6 input{
+    width: 100%;
+    
+}
+
+.col-6 label{
+    padding-left: 15px;
+    
 }

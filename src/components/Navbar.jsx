@@ -9,9 +9,10 @@ class Navbar extends React.Component{
             <React.Fragment>
                 <div id="navbar">
                     <div id="profile">
-                        <img id="avatar" src={require('../assets/img/avatar.jpg')} />
+                        <img id="avatar" src={localStorage.getItem('img')}/>
                         <br />
-                        <span>Usuario</span>
+                        <span>{localStorage.getItem('nombre')}</span><br />
+                        <span>{localStorage.getItem('rol')}</span>
                     </div>
                     <div id="navbar-items">
                         <ul>

@@ -32,20 +32,23 @@ class Login extends React.Component{
                 [e.target.id]: e.target.value
             }
         })
-        // console.log(this.state.form);
     }
 
     manejadorBoton=()=>{
         let url = ApiURL + "/api/auth/login";
-        // console.log(url);
-        // console.log(this.state.form);
         axios.post(url, this.state.form)
         .then(response=>{
-            console.log(response);
             if (response.statusText === "OK"){
                 this.setState({
                     error: false
                 })
+                localStorage.setItem('nombre', response.data.usuario.nombre);
+                localStorage.setItem('correo', response.data.usuario.correo);
+                localStorage.setItem('estado', response.data.usuario.estado);
+                localStorage.setItem('google', response.data.usuario.google);
+                localStorage.setItem('img', response.data.usuario.img);
+                localStorage.setItem('rol', response.data.usuario.rol);
+                localStorage.setItem('uid', response.data.usuario.uid);
                 window.location.replace("/dashboard");
                 
 
