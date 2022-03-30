@@ -9,11 +9,16 @@ import Dashboard from './components/Dashboard';
 import Usuarios from './components/Usuarios';
 import Productos from './components/Productos';
 import Categorias from './components/Categorias';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <React.Fragment>
       <Router>
+        {window.location.pathname != "/" &&
+          <Navbar/>
+        }
+
         <Routes>
           <Route exact path='/' element={<Login/>}/>
           <Route exact path='/dashboard' element={<Dashboard/>}/>
