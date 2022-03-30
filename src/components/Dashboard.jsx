@@ -4,7 +4,7 @@ class Dashboard extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <div className='page'>
+                <div className='header'>
                     <b>Dashboard</b>
                 </div>
             </React.Fragment>
