@@ -15,11 +15,11 @@ function App() {
     <React.Fragment>
       <Router>
         <Routes>
-          <Route path='/' exact element={<Login/>}/>
-          <Route path='/dashboard' exact element={<Dashboard/>}/>
-          <Route path='/usuarios' exact element={<Usuarios/>}/>
-          <Route path='/productos' exact element={<Productos/>}/>
-          <Route path='/categorias' exact element={<Categorias/>}/>
+          <Route exact path='/' element={<Login/>}/>
+          <Route exact path='/dashboard' element={<Dashboard/>}/>
+          <Route exact path='/usuarios' element={<Usuarios/>}/>
+          <Route exact path='/productos' element={<Productos/>}/>
+          <Route exact path='/categorias' element={<Categorias/>}/>
         </Routes>
       </Router>
     </React.Fragment>
