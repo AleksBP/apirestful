@@ -1,13 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-import '../assets/css/Login.css'
+// CSS
+import '../assets/css/Login.css';
+
+// SERVICIOS
+import { ApiURL } from '../services/apirest';
+
+// LIBRERIAS
+import axios from 'axios';
 
 class Login extends React.Component{
 
     state={
         form:{
             "correo":"",
-            "contrasena":""
+            "password":""
         },
         error:false,
         errorMsg:""
@@ -28,7 +35,7 @@ class Login extends React.Component{
     }
 
     manejadorBoton(){
-        console.log("Se presionó Submit");
+        let url = ApiURL + "/api/auth/login";
     }
 
     render(){
@@ -39,7 +46,7 @@ class Login extends React.Component{
 
                         <form onSubmit={this.manejadorSubmit}>
                             <input type="text" id="correo" name="login" placeholder="Correo" onChange={this.manejadorOnChange}/>
-                            <input type="text" id="contrasena" name="login" placeholder="Contraseña" onChange={this.manejadorOnChange}/>
+                            <input type="text" id="password" name="login" placeholder="Contraseña" onChange={this.manejadorOnChange}/>
                             <br /><br />
                             <input type="submit" value="INGRESAR" onClick={this.manejadorBoton}/>
                         </form>
