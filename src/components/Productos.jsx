@@ -1,11 +1,14 @@
 import React from 'react'
+import '../assets/css/General.css'
 
 class Productos extends React.Component{
     render(){
         return(
-            <div>
-                Elemento desde Productos.jsx
-            </div>
+            <React.Fragment>
+                <div className='page'>
+                    Elemento desde Productos.jsx
+                </div>
+            </React.Fragment>
         );
     }
 }

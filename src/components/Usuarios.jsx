@@ -1,11 +1,15 @@
 import React from 'react'
+import '../assets/css/General.css'
 
 class Usuarios extends React.Component{
     render(){
         return(
-            <div>
-                Elemento desde Usuarios.jsx
-            </div>
+            <React.Fragment>
+                <div className="page">
+                    Elemento desde Usuarios.jsx
+
+                </div>
+            </React.Fragment>
         );
     }
 }

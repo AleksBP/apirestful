@@ -1,11 +1,15 @@
 import React from 'react'
+import '../assets/css/General.css'
 
 class Categorias extends React.Component{
     render(){
         return(
-            <div>
-                Elemento desde Categorias.jsx
-            </div>
+            <React.Fragment>
+                <div className='page'>
+                    Elemento desde Categorias.jsx
+                </div>
+
+            </React.Fragment>
         );
     }
 }

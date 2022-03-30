@@ -1,0 +1,6 @@
+#navbar{
+    position: absolute;
+    border: 1px solid black;
+    width: 400px;
+    min-height: 100%;
+}
