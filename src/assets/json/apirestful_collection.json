@@ -1,0 +1,453 @@
+{
+    "info": {
+        "_postman_id": "7c7abe2e-96c0-4a6f-91af-5512173dd3cd",
+        "name": "Curso Node Rest-Api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Productos",
+            "item": [
+                {
+                    "name": "CrearProducto",
+                    "id": "d4cdf143-ea6b-4404-b8f9-c49a881c5574",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWFhN2Y0ZGNmZGI5OTA0M2MyZDhkMzciLCJpYXQiOjE2NDE1MDg4NzQsImV4cCI6MTY0MTUyMzI3NH0.06QgUNoCHQd8Cf3_W-Vfli8xKBWQyZQNXw-CzWs2JLk",
+                                "type": "default"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"categoria\": \"61d4cc13971bc551e416b7ce\",\r\n    \"descripcion\": \"Este articulo es de mucho valor\",\r\n    \"disponible\": false,\r\n    \"nombre\": \"PickUp\",\r\n    \"precio\": 100\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{Production}}/api/productos/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ObtenerProducto",
+                    "id": "e7731e84-d3bc-4324-bf2b-35bf489ac36b",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "{{Production}}/api/productos/61d73a9239536a2d885d11f4"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "EliminarProducto",
+                    "id": "16d01418-da77-4ab9-be61-0dc043db725e",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "x-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWFhN2Y0ZGNmZGI5OTA0M2MyZDhkMzciLCJpYXQiOjE2NDE1MDg4NzQsImV4cCI6MTY0MTUyMzI3NH0.06QgUNoCHQd8Cf3_W-Vfli8xKBWQyZQNXw-CzWs2JLk",
+                                "type": "default"
+                            }
+                        ],
+                        "url": "{{Production}}/api/productos/61d739399fdf31019ca79636"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ObtenerProductos",
+                    "id": "485b5b2f-909f-4a7d-9c37-46bef695654e",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": {
+                            "raw": "{{Production}}/api/productos/?desde=0&limite=3",
+                            "host": [
+                                "{{Production}}"
+                            ],
+                            "path": [
+                                "api",
+                                "productos",
+                                ""
+                            ],
+                            "query": [
+                                {
+                                    "key": "desde",
+                                    "value": "0"
+                                },
+                                {
+                                    "key": "limite",
+                                    "value": "3"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ActualizarProducto",
+                    "id": "7363e5bb-548e-4468-8343-bbff37f2d09b",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "x-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWFhN2Y0ZGNmZGI5OTA0M2MyZDhkMzciLCJpYXQiOjE2NDE1MDg4NzQsImV4cCI6MTY0MTUyMzI3NH0.06QgUNoCHQd8Cf3_W-Vfli8xKBWQyZQNXw-CzWs2JLk",
+                                "type": "default"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\r\n    \"precio\": 100,\r\n    \"disponible\": true,\r\n    \"_id\": \"61d739399fdf31019ca79636\",\r\n    \"nombre\": \"OTRACOSA\",\r\n    \"usuario\": \"61aa7f4dcfdb99043c2d8d37\",\r\n    \"categoria\": \"61d4cc13971bc551e416b7ce\",\r\n    \"descripcion\": \" Este articulo ya esta muy modificado\",\r\n    \"estado\" : false\r\n\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{Production}}/api/productos/61d739399fdf31019ca79636"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "cdaf9c22-9234-4ee5-bf9d-c38aeb2329c0"
+        },
+        {
+            "name": "Usuarios",
+            "item": [
+                {
+                    "name": "ActualizarUsuario",
+                    "id": "be815e44-5610-4c9d-99b6-bea16561945b",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"nombre\": \"Roberto\",\r\n    \"google\": false,\r\n    \"correo\": \"rcorrea@pktuno.com\",\r\n    \"password\": \"293780\",\r\n    \"rol\": \"USER_ROLE\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{Production}}/api/usuarios/61a28d8cdec96ddd1463c294"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "CrearUsuario",
+                    "id": "f5842663-174e-4d3d-909d-fa82e161e040",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"nombre\": \"Roberto\",\r\n    \"google\": false,\r\n    \"correo\": \"rcorrea@pktuno.com\",\r\n    \"password\": \"293780\",\r\n    \"rol\": \"USER_ROLE\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{Production}}/api/usuarios/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ObtenerUsuarios",
+                    "id": "092091de-39b0-43c7-96a6-1389f3381796",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{Production}}/api/usuarios/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "EliminarUsuario",
+                    "id": "44537621-6af2-4bf0-b78c-c2d55b1a8b7e",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "x-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWFhN2Y0ZGNmZGI5OTA0M2MyZDhkMzciLCJpYXQiOjE2Mzk0MjA5MjAsImV4cCI6MTYzOTQzNTMyMH0.IDwWFtu2WODHTGu2HtfoNyNN6JscDch9-GvtMqae9vI",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": "{{Production}}/api/usuarios/61aa7f4dcfdb99043c2d8d37"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "803534d9-67a3-486e-bec4-808ac895db51"
+        },
+        {
+            "name": "Categorias",
+            "item": [
+                {
+                    "name": "ObtenerCategeorias",
+                    "id": "67577269-3e0a-461e-8b4e-4d636abc3cf4",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "{{Production}}/api/categorias/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "CrearCategoria",
+                    "id": "67cc2bdf-e0a4-4f9f-978b-1fad3a880740",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": "{{Production}}/api/categorias/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ObtenerCatergoriaPorID",
+                    "id": "3b6dea40-2b27-4c4c-ad69-22bdd00f3923",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "{{Production}}/api/categorias/161"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "EliminarCategoria",
+                    "id": "01bf144d-d551-4da4-8dbd-93d6fbe67cca",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": "{{Production}}/api/categorias/1651561"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ActualizarCategoria",
+                    "id": "ca6290fb-335e-4217-a655-fce5fac39219",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "url": "{{Production}}/api/categorias/1651561"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "d62df440-9044-4bd7-b438-36877695ba74"
+        },
+        {
+            "name": "Busqueda",
+            "item": [
+                {
+                    "name": "MultiBusqueda",
+                    "id": "ecb1dc0c-3ed8-4a19-9df1-f2e7d089a653",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "{{Production}}/api/buscar/productos/camioneta"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "08f29a80-fd15-4b53-bc30-2c81bdaa2b5f"
+        },
+        {
+            "name": "CargarImg",
+            "item": [
+                {
+                    "name": "ActualizarImgUsuario",
+                    "id": "0d6aa999-6677-4042-bd9f-97c94eefeb0e",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "archivo",
+                                    "type": "file",
+                                    "src": "/C:/Users/PKT1-SALVADOR/Pictures/firma.png"
+                                }
+                            ]
+                        },
+                        "url": "{{Dev}}/api/uploads/usuarios/61aa7f4dcfdb99043c2d8d37"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "CargarImg",
+                    "id": "4340bb44-b8b4-4430-9041-534eb90f618f",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "archivo",
+                                    "type": "file",
+                                    "src": "/C:/Users/PKT1-SALVADOR/Pictures/Credencial-Reverso.jpg"
+                                }
+                            ]
+                        },
+                        "url": "{{Dev}}/api/uploads/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ActualizarImgProducto",
+                    "id": "79b4287c-13be-478f-9562-be8ca34d7279",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "archivo",
+                                    "type": "file",
+                                    "src": "/C:/Users/PKT1-SALVADOR/Pictures/Credencial-Reverso.jpg"
+                                }
+                            ]
+                        },
+                        "url": "{{Dev}}/api/uploads/productos/61d73a9239536a2d885d11f4"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ObtenerImgUsuario",
+                    "id": "48bd7138-a92d-4414-ac29-e68894909011",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": "{{Dev}}/api/uploads/usuarios/619d39db8bef5b37887c1269"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ObtenerImgProducto",
+                    "id": "d3b0149b-504a-4433-bd69-3e2603757e70",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "{{Dev}}/api/uploads/productos/61d73a9239536a2d885d11f4"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "SubirIMagenesArchivos",
+                    "id": "076896f1-6341-4bf8-8c8a-15f02fd51ec3",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "archivo",
+                                    "type": "file",
+                                    "src": "/C:/Users/PKT1-SALVADOR/Pictures/algo.md"
+                                }
+                            ]
+                        },
+                        "url": "{{Dev}}/api/uploads/"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "aced0dad-168e-435a-8c32-6f4b23570cbc"
+        },
+        {
+            "name": "IniciarSesión",
+            "id": "eb400195-f450-404b-b767-7f7e3d0fcee3",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"correo\"   :\"rcorrea@pktuno.com\",\r\n    \"password\" :\"293780\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "{{Production}}/api/auth/login"
+            },
+            "response": []
+        },
+        {
+            "name": "GoogleSignIn",
+            "id": "05931dfb-c4c2-4f82-9769-83a8c371aa84",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id_token\":\"abc135165\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "{{Production}}/api/auth/google"
+            },
+            "response": []
+        },
+        {
+            "name": "RenovarOValidarJWT",
+            "id": "05fa3d90-2174-4741-9836-a734976e283e",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "x-token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWFhN2Y0ZGNmZGI5OTA0M2MyZDhkMzciLCJpYXQiOjE2NDQ1OTc5MDIsImV4cCI6MTY0NDYxMjMwMn0.usN2sE1xwC-b22l1jZ4r8BOV5_iR4hRRgJncu_7XK_Q",
+                        "type": "text"
+                    }
+                ],
+                "url": "{{Dev}}/api/auth/"
+            },
+            "response": []
+        }
+    ]
+}

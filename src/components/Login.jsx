@@ -3,17 +3,45 @@ import React from 'react'
 import '../assets/css/Login.css'
 
 class Login extends React.Component{
+
+    state={
+        form:{
+            "correo":"",
+            "contrasena":""
+        },
+        error:false,
+        errorMsg:""
+    }
+
+    manejadorSubmit=e=>{
+        e.preventDefault();
+    }
+
+    manejadorOnChange = async e =>{
+        await this.setState({
+            form:{
+                ...this.state.form,
+                [e.target.name]: e.target.value
+            }
+        })
+        console.log(this.state.form);
+    }
+
+    manejadorBoton(){
+        console.log("Se presionó Submit");
+    }
+
     render(){
         return(
             <React.Fragment>
                 <div className="wrapper fadeInDown">
                     <div id="formContent">
 
-                        <form>
-                            <input type="text" id="login" className="fadeIn second" name="login" placeholder="Correo"/>
-                            <input type="text" id="password" className="fadeIn third" name="login" placeholder="Contraseña"/>
+                        <form onSubmit={this.manejadorSubmit}>
+                            <input type="text" id="correo" name="login" placeholder="Correo" onChange={this.manejadorOnChange}/>
+                            <input type="text" id="contrasena" name="login" placeholder="Contraseña" onChange={this.manejadorOnChange}/>
                             <br /><br />
-                            <input type="submit" className="fadeIn fourth" value="INGRESAR"/>
+                            <input type="submit" value="INGRESAR" onClick={this.manejadorBoton}/>
                         </form>
 
                     </div>
